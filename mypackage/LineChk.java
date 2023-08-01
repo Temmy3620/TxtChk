@@ -1,3 +1,5 @@
+package mypackage;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,11 +9,11 @@ import java.util.List;
 import java.nio.charset.Charset;
 
 public class LineChk {
-    public static void main(String[] args) {
+    public static List<String> LineCheckAndRead(String filePath,int lineNum) {
         Charset charset = Charset.forName("UTF-8");
-        String filename = "shop/くろ/resulte_dir.log";
+        String filename = filePath;
         
-        int numberOfLinesToRead = 10; // 読み込む行数を指定
+        int numberOfLinesToRead = lineNum; // 読み込む行数を指定
 
         List<String> lines = new ArrayList<>();
 
@@ -37,7 +39,10 @@ public class LineChk {
         int rmNum = lastNLines.size() - 1;
         lastNLines.remove(rmNum);
 
-        System.out.println(lastNLines);
+        System.out.println(filePath + "のリストを返します：");
+        System.out.print(lastNLines);
+
+        return lastNLines;
 
         
         //javac -encoding UTF-8 TextChk.java
