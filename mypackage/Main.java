@@ -25,7 +25,7 @@ public class Main {
     System.out.println(resultDirLine);
 
     List<String> upgradeDirLine = LineChk.LineCheckAndRead("dir_upgrade\\dir_upgrade.txt",countLine - 7);
-    System.out.println(resultDirLine);
+    System.out.println(upgradeDirLine);
 
 
     
